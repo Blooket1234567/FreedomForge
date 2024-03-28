@@ -29,6 +29,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "blooket1234-freedomforg-18"
-          entrypoint: ""
-          root: "node index.js"
+          project: "blooket1234-freedomforg-60"
+          entrypoint: "node index.js"
+          root: ""
