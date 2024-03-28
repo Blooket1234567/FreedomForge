@@ -23,12 +23,20 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Build step
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+
+      - name: Install step
         run: "node"
+
+      - name: Build step
+        run: "node index.js"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "blooket1234-freedomforg-18"
-          entrypoint: "node index.js"
+          entrypoint: ""
           root: ""
